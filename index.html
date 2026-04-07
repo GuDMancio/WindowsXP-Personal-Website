@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <!-- CSS do jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <title>WinXP</title>
+</head>
+<body>
+
+    <div id="windowsXP">
+        <div class="area-de-trabalho">
+            <div id="lixeira" class="desktop-icon">
+                <img src="images/lixeira.png" alt="lixeira">
+                <span>Lixeira</span>
+            </div>
+
+            <div id="ie" class="desktop-icon">
+                <img src="images/internet-explorer.png" alt="InternetExplorer">
+                <span>Internet Explorer</span>
+            </div>
+
+            <div id="currículo-icon" class="desktop-icon" ondblclick="abrirJanela('janela-curriculo')">
+                <img src="images/folder-curriculo.ico" alt="Currículo">
+                <span>Currículo</span>
+            </div>
+
+            <div id="hello-icon" class="desktop-icon" ondblclick="abrirJanela('janela-hello')">
+                <img src="images/MP3.ico" alt="Hello">
+                <span>Hello.mp3</span>
+            </div>
+
+            <div id="portifolio-icon" class="desktop-icon" ondblclick="abrirJanela('janela-portifolio')">
+                <img src="images/portifolio.ico" alt="Portifólio">
+                <span>Portifólio</span>
+            </div>
+        </div>
+
+        <div id="menu-iniciar">
+        <div class="topo-iniciar">
+            <div class="avatar-iniciar">
+            </div>
+            <h2 class="usuario-iniciar">
+                SLA!
+            </h2>
+        </div>
+
+        <div class="meio-iniciar">
+            <div class="col" style="border-right: 3px solid #a3b6c2;">
+                <div id="ie-iniciar" class="item-iniciar">
+                    <img src="images/internet-explorer.png" alt="Internet Explorer" class="icon-iniciar">
+                    <span><strong>Internet</strong><br>Internet Explorer</span>
+                </div>
+
+                <div id="email-iniciar" class="item-iniciar">
+                    <img src="images/email.png" alt="Email" class="icon-iniciar">
+                    <span><strong>Email</strong><br>Gmail profissional</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div id="hello-iniciar" class="item-iniciar" onclick="abrirJanela('janela-hello')">
+                    <img src="images/MP3.ico" alt="MP3" class="icon-iniciar">
+                    <span><strong>Hello</strong><br>Bem-vindo!</span>
+                </div>
+
+                <div id="portifolio-iniciar" class="item-iniciar">
+                    <img src="images/portifolio.ico" alt="Portifolio" class="icon-iniciar">
+                    <span><strong>Portifolio</strong><br>Confira meus projetos!</span>
+                </div>
+
+                <div id="email-iniciar" class="item-iniciar">
+                    <img src="images/email.png" alt="Email" class="icon-iniciar">
+                    <span><strong>Email</strong><br>Gmail profissional</span>
+                </div>
+            </div>
+
+            <div class="col" style="background: #BCD2E0">
+                <div id="curriculo-iniciar" class="item-iniciar2" onclick="abrirJanela('janela-curriculo')">
+                    <img src="images/folder-curriculo.ico" alt="curriculo" class="icon-iniciar2">
+                    <span><strong>Curriculo</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-iniciar">
+            <div class="botao-footer">
+                <img src="images/logoff.png" alt="logoff">
+                <a href="#">Fazer logoff</a>
+            </div>
+
+            <div class="botao-footer">
+                <img src="images/desligar.png" alt="logoff">
+                <a href="#">Desligar</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="barra-de-tarefas">
+            <button id="iniciar" onclick="iniciar()">
+                <img
+                width="30"
+                src="images/windows.png"
+                alt="Botão Iniciar">
+                &nbsp;
+                <strong>Start</strong>
+            </button>
+
+            <div class="area-de-notificacao">
+                <div class="icon" id="volume">
+
+                </div>
+
+                <div class="icon" id="media">
+
+                </div>
+
+                <div class="icon" id="seguranca">
+
+                </div>
+
+                <div id="relogio">
+                --:--
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="janela-curriculo" class="janela" >
+            <div class="topo-janela">
+                <div class="titulo-janela">
+                    <img class="icone-janela" src="images/folder-curriculo.ico" alt="Curriculo">
+                    <h2>Curriculo</h2>
+                </div>
+
+                <div class="botoes-janela">
+                    <img class="botao-janela botao-minimizar" src="images/minimizar.png" alt="Minimizar">
+                    <img class="botao-janela botao-maximizar" src="images/maximizar.png" alt="Maximizar">
+                    <img class="botao-janela botao-fechar" src="images/fechar.png" alt="Fechar">
+                </div>
+            </div>
+
+            <div class="conteudo-janela" id="conteudo-curriculo">
+                <div id="topo-curriculo">
+                    <img src="images/avatar.jpg" alt="">
+
+                    <div id="info-basica-curriculo">
+                        <h2>Gustavo Domingues Mancio, 20 anos</h2>
+                        <h3>C | Python | Java | JavaScript | HTML & CSS</h3>
+                        <h3>Estudante da Unicamp</h3>
+                        <h4>Tecnologia em Análise e Desenvolvimento de Sistemas</h4>
+                        <p>Semestres: 3/7 - Previsão de conclusão em junho de 2028</p>
+                    </div>
+                </div>
+
+                <div id="info-curriculo">
+                    <div class="info-curriculo" id="endereco-contato">
+                        <h1>Endereço e Contato</h1>
+                        <p>Jardim Morro Azul, Limeira, SP</p>
+                        <p>(+55) 11 95877-1116</p>
+                        <table>gudomingues.profissional@gmail.com</table>
+                    </div>
+
+                    <div class="info-curriculo" id="objetivo">
+                        <h1>Objetivos</h1>
+                            <p>
+                            Desenvolvedor há mais de 1 ano cursando Análise e Desenvolvimentos de Sistema na Unicamp
+buscando a primeira oportunidade de estágio para aprender e evoluir como profissional.
+                            </p>
+                    </div>
+
+                    <div class="info-curriculo" id="conhecimentos">
+                        <h1>Conhecimentos</h1>
+                            <p>
+                                Experiência de desenvolvimento de programas em C, Python, Java e desenvolvimento web
+usando HTML, CSS e JavaScript
+                            </p>
+                    </div>
+                    
+                    <div class="info-curriculo" id="experiencias">
+                        <h1>Experiências</h1>
+                        <div class="experiencia" id="atriaJr">
+                            <h2>Atria Júnior</h4>
+                            <h3>Assessor de Marketing - 2025 (em atuação)</h3>
+                            <p>
+                                Faço parte da empresa júnior da Faculdade de Tecnologia da Unicamp, onde sou assessor de
+marketing, desenvolvendo e elaborando posts para o Instagram da empresa e campanhas de
+divulgação. No cargo, aprimorei minhas habilidades de comunicação e trabalho em equipe
+integrado com diferentes áreas.
+                            </p>
+                        </div>
+
+                        <div class="experiencia" id="semeiaCode">
+                            <h2>SemeiaCode</h2>
+                            <h3>Professor - 2026 (em atuação)</h3>
+                            <p>
+                                Sou atualmente professor de um projeto da Faculdade de Tecnologia da Unicamp chamado
+SemeiaCode, onde dou aulas de programação em Python para jovens do ensino médio da
+escola Brasil (E. E. Brasil) na cidade de Limeira. Com essa oportunidade pude aprimorar minhas
+habilidades de comunicação e consolidar minha base em lógica de programação e Python.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-curriculo" id="educacao">
+                        <h1>Educação</h1>
+                        <h2>UNICAMP - Universidade Estadual de Campinas</h2>
+                        <p>Tecnologia em Análise e Desenvolvimento de Sistemas</p>
+                        <p>C, Java, Python, lógica de programação, lógica computacional, sistemas operacionais,
+engenharia de software, UML</p>
+                    </div>
+
+                    <div class="info-curriculo" id="idiomas">
+                        <h1>Idiomas</h1>
+                        <p>Português - Fluente</p>
+                        <p>Inglês - Intermediário (B1)</p>
+                    </div>
+            </div>
+            </div>
+        </div>
+        
+        <div id="janela-hello" class="janela">
+            <div class="topo-janela">
+                <div class="titulo-janela">
+                    <img class="icone-janela" src="images/MP3.ico" alt="Hello">
+                    <h2>Hello.mp3</h2>
+                </div>
+
+                <div class="botoes-janela">
+                    <img class="botao-janela botao-minimizar" src="images/minimizar.png" alt="Minimizar">
+                    <img class="botao-janela botao-maximizar" src="images/maximizar.png" alt="Maximizar">
+                    <img class="botao-janela botao-fechar" src="images/fechar.png" alt="Fechar">
+                </div>
+            </div>
+
+            <div class="conteudo-janela" id="conteudo-janela-hello">
+                <img id="play-button" src="images/playerVideo.gif" alt="Play" style=" width: 100%; height: 97%;">
+            </div>
+        </div>
+
+</body>
+<script src="scripts.js"></script>
+</html>

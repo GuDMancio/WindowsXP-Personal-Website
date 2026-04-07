@@ -1,0 +1,406 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#windowsXP{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.area-de-trabalho{
+    display: flex;
+    flex-flow: column;
+    width:100vw;
+    background: url(images/background.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.barra-de-tarefas{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 40px;
+    background: linear-gradient(
+        to bottom,
+        #245EDB 0%,
+        #0C8DEA 9%,
+        #245EDB 18%,
+        #245EDB 92%,
+        #333 100%
+    );
+}
+
+#iniciar{
+    display: flex;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: linear-gradient(
+        to bottom,
+        #3d963d 0%,
+        #6faf72 9%,
+        #3d963d 18%,
+        #3d963d 92%,
+        #666 100%
+    );
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-shadow: 2px 2px 8px #003d00;
+    cursor: pointer;
+}
+
+#iniciar:hover{
+        background: linear-gradient(
+        to bottom,
+        #3d963d 0%,
+        #6faf72 9%,
+        #3d963d 18%,
+        #37d437 92%,
+        #666 100%
+        );
+}
+
+.area-de-notificacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    background: linear-gradient(
+        to bottom,
+        #0fadf4 0%,
+        #0fadf4 9%,
+        #108ae5 18%,
+        #108ae5 92%,
+        #666 100%
+    );
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+}
+
+#volume{
+    margin-left: 10px;
+    background: url(images/volume-icon.png);
+    background-size: cover;
+}
+
+#media{
+    margin-left: 10px;
+    background: url(images/windowsMediaPlayer.png);
+    background-size: cover;
+}
+
+#seguranca{
+    margin-left: 10px;
+    background: url(images/windowsSecurity.png);
+    background-size: cover;
+}
+
+#relogio{
+    font: normal 25pt;
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.desktop-icon{
+    width: 80px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    line-height: 12px;
+}
+
+.desktop-icon img{
+    max-width: 100%;
+}
+
+.desktop-icon span{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    text-shadow: 1px 1px 4px black;
+}
+
+.desktop-icon.selected span{
+    background: #004E98
+}
+
+#menu-iniciar{
+    display: none;
+    width: 500px;
+    height: 600px;
+    position: fixed;
+    bottom: 40px;
+    background: white;
+    z-index: 999;
+    border-top-right-radius: 5px;
+}
+
+.topo-iniciar{
+    display: flex;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        #245EDB 0%,
+        #0C8DEA 20%,
+        #245EDB 55%,
+        #245EDB 92%,
+        #245EDB 100%
+    );
+    height: 90px;
+    align-items: center;
+    border-top-right-radius: 5px;
+}
+
+.usuario-iniciar{
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    margin-left: 20px;
+    text-shadow: 2px 2px 8px Explorer#003d00;
+}
+
+.avatar-iniciar{
+    width: 70px;
+    height: 70px;
+    background: blue;
+    background-image: url(images/avatar.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.meio-iniciar{
+    display: flex;
+    width: 100%;
+    height: 510px;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.footer-iniciar{
+    display: flex;
+    position: absolute;
+    background: linear-gradient(
+        to bottom,
+        #245EDB 0%,
+        #0C8DEA 9%,
+        #245EDB 18%,
+        #245EDB 92%,
+        #333 100%
+    );
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.botao-footer{
+    display: flex;
+    align-items: center;
+}
+
+.botao-footer a{
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 25px;
+}
+
+.item-iniciar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 60px;
+    padding-left: 15px;
+    cursor: pointer;
+    color: #666;
+}
+
+.item-iniciar span>strong{
+    color: black;
+}
+
+.icon-iniciar{
+    width: 50px;
+    height: auto;
+}
+
+.divider {
+  height: 1px;
+  background: #c0c0c0;
+  box-shadow: 0 1px 0 #ffffff;
+  margin: 6px 0;
+}
+
+.item-iniciar2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 60px;
+    padding-left: 15px;
+    cursor: pointer;
+    color: #031E56;
+}
+
+.icon-iniciar2{
+    width: 40px;
+    height: auto;
+}
+
+.janela {
+    position: absolute; /* Importante para o draggable */
+    top: 50px;
+    display: none;
+    left: 100px;
+    width: 400px;
+    min-height: 300px;
+    background: #ECE9D8; /* Cor clássica do fundo das janelas XP */
+    border: 3px solid #0055E5;
+    border-top: none;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.topo-janela{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(
+        to bottom, 
+        #001c44 0%,    /* Azul escuro no topo */
+        #0066ff 15%,   /* Transição para azul vibrante */
+        #0066ff 85%,   /* Mantém o azul vibrante no meio */
+        #001c44 100%   /* Azul escuro na base */ );
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: move;
+}
+
+.titulo-janela{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 5px;
+    font-size: 13px;
+    color: white;
+    text-shadow: 2px 2px 8px #003d00;
+}
+
+.botao-janela{
+    height: 30px;
+    width: auto;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.icone-janela{
+    height: 30px;
+}
+
+.conteudo-janela {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Isso garante que 100% seja realmente 100% */
+}
+
+#janela-curriculo{
+    width: 660px;
+    height: 750px;
+    display: none;
+    background: white;
+}
+
+#topo-curriculo img{
+    height: 150px;
+    display: flex;
+}
+
+#topo-curriculo{
+    display: flex;
+    justify-items: center;
+    gap: 20px;
+}
+
+#info-curriculo{
+    display: flex;
+    gap: 30px;
+    flex-flow: column;
+}
+
+#experiencias{
+    display: flex;
+    gap: 20px;
+    flex-flow: column;
+}
+
+#educacao{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+}
+
+#janela-hello{
+    display: flex;
+}
+
+#conteudo-janela-hello{
+    justify-items: space;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#play-button{
+    height: 200px;
+}
+
+#header-janela{
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    right: 0;
+}
+
+#janela-hello{
+    display: flex;
+    background-color: #333;
+}
